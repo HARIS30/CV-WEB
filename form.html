@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Isi Data CV</h2>
+
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama">
+
+        <label for="ttl">Tempat, Tanggal Lahir:</label>
+        <input type="text" id="ttl">
+
+        <label for="pendidikan">Riwayat Pendidikan:</label>
+        <textarea id="pendidikan"></textarea>
+
+        <button onclick="simpanData()">Lihat CV</button>
+    </div>
+
+    <script>
+        function simpanData() {
+            let nama = document.getElementById("nama").value;
+            let ttl = document.getElementById("ttl").value;
+            let pendidikan = document.getElementById("pendidikan").value;
+
+            localStorage.setItem("nama", nama);
+            localStorage.setItem("ttl", ttl);
+            localStorage.setItem("pendidikan", pendidikan);
+
+            window.location.href = "cv.html"; // Pindah ke halaman CV
+        }
+    </script>
+</body>
+</html>

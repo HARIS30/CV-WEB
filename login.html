@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button onclick="login()">Login</button>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script>
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            
+            // Password harus sesuai dengan domain email
+            let emailDomain = email.split("@")[1];
+            if (password === emailDomain) {
+                localStorage.setItem("email", email);
+                window.location.href = "form.html";
+            } else {
+                document.getElementById("error-message").innerText = "Password salah!";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* Warna dasar untuk teks agar putih kecoklatan */
+body {
+    font-family: Arial, sans-serif;
+    color: #f5e1c5; /* Putih kecoklatan */
+    background-color: #1e3d1f; /* Hijau tua */
+    display: flex;
+    justify-content: center; /* Tengah secara horizontal */
+    align-items: center; /* Tengah secara vertikal */
+    height: 100vh; /* Tinggi penuh layar */
+    margin: 0; /* Hilangkan margin bawaan */
+}
+
+/* Style untuk container utama */
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: #b88a4f; /* Coklat */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Style teks di dalam container */
+h2, label {
+    color: #fff6e0; /* Putih kecoklatan lebih terang */
+}
+
+/* Input field */
+input, textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8d6b3b;
+    background: #f5e1c5;
+    color: #5a3e1b; /* Coklat tua untuk teks */
+    margin-bottom: 15px; /* Space antar input */
+}
+
+/* Placeholder text agar kontras */
+input::placeholder, textarea::placeholder {
+    color: #8d6b3b; /* Coklat lebih gelap */
+}
+
+/* Style tombol */
+button {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    background: #6e8efb;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Space setelah tombol */
+}
+
+/* Warna merah untuk error pesan */
+.error {
+    color: rgb(207, 14, 14);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Style tampilan CV */
+.cv-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    text-align: left; /* Semua teks di dalam CV rata kiri */
+    color: #fff6e0;
+}
+
+/* Style setiap item data CV */
+.cv-item {
+    margin-bottom: 15px; /* Space antar data */
+    display: flex;
+    flex-direction: column; /* Agar label dan isian berurutan ke bawah */
+}
+
+/* Label untuk CV (judul seperti "Nama:", "Email:") */
+.cv-item label {
+    font-weight: bold;
+    text-align: left; /* Pastikan label rata kiri */
+    margin-bottom: 5px;
+}
+
+/* Data yang ditampilkan pada CV */
+.cv-item span {
+    display: block; /* Membuat teks ada di bawah label */
+    background: rgba(255, 255, 255, 0.171); /* Sedikit highlight */
+    padding: 8px;
+    border-radius: 5px;
+    text-align: left; /* Pastikan isi teks juga rata kiri */
+}
